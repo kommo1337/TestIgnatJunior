@@ -1,0 +1,51 @@
+﻿<Window x:Class="TestIgnatJunior.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestIgnatJunior"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TabControl>
+            <TabItem Header="Организации">
+                <StackPanel Margin="10">
+                    <Label Content="Наименование"/>
+                    <TextBox Name="NameOrg"/>
+                    <Label Content="ИНН"/>
+                    <TextBox Name="INN"/>
+                    <Label Content="Юр. адрес"/>
+                    <TextBox Name="YrAdress"/>
+                    <Label Content="Факт. адрес"/>
+                    <TextBox Name="FactAdress"/>
+                    <Button Content="Добавить" Name="AddOrgan" Margin="0,10,0,0" Click="AddOrgan_Click"/>
+                    <Button Content="Экспорт в CSV" Name="ExportOrg" Margin="0,10,0,0" Click="ExportOrg_Click"/>
+                    <Button Content="Импорт из CSV" Name="ImportOrg" Margin="0,10,0,0" Click="ImportOrg_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Сотрудники">
+                <StackPanel Margin="10">
+                    <Label Content="Фамилия"/>
+                    <TextBox Name="Surname"/>
+                    <Label Content="Имя"/>
+                    <TextBox Name="name"/>
+                    <Label Content="Отчество"/>
+                    <TextBox Name="Therdname"/>
+                    <Label Content="Дата рождения"/>
+                    <DatePicker Name="date"/>
+                    <Label Content="Паспорт серия"/>
+                    <TextBox Name="series"/>
+                    <Label Content="Паспорт номер"/>
+                    <TextBox Name="number"/>
+                    <Button Content="Добавить" Margin="0,10,0,0" Click="Button_Click"/>
+                    <Button Content="Экспорт в CSV" Name="ExportEmp" Margin="0,10,0,0" Click="ExportEmp_Click"/>
+                    <Button Content="Импорт из CSV" Name="ImportEmp" Margin="0,10,0,0" Click="ImportEmp_Click"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
